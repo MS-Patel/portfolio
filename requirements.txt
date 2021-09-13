@@ -7,7 +7,6 @@ whitenoise==5.3.0
 psycopg2-binary==2.9.1
 Pillow==8.1.2
 distro==1.5.0
-distro-info==1.0
 requests==2.25.1
 httplib2==0.18.1
 oauthlib==3.1.0
