@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Blog | CSS Specificity</title> 
+{% endblock %}
+    
+{% block content %}
+    <header class="header">
+        {% load static %}
+        <img class="hero" src="{% static 'img/CSS_speficity.png'%}">
+        <h1 class="hero-heading">CSS Specificity. Heard about it?</h1>
+    </header>
+    <hr class="blogshr">
+    <div class="container centered-container ">
+        <p>
+            Hello and Welcome. Style can be applied to the HTML documents in various ways, using the style attribute in elements
+            ( also called Inline styles), using style tag in the head section( embedded style-sheet ) of the HTML documents,
+            and using Cascading Style Sheets or CSS files.
+        </p>
+        <p>
+            Using CSS files is the most common way these days to design a document. But, since there are various ways to apply style what would happen
+            if a different style is applied to an element in the document using different methods. Here the concept of CSS specificity comes to the picture.
+            It is a simple set of rules the browser follows to determine which CSS rule is most specific and therefore applying that rule( if it encounters
+            conflicting CSS rules that point to the same element ).
+        </p>
+        <p>
+            There are 3 selectors(and inline styles) that are used in CSS to style the documents :<br><br>
+            1) Inline styles - An inline style is attached directly to the element to be styled.<br>
+
+            2) IDs - An ID is a unique identifier for the page elements, such as #navbar.<br>
+
+            3) Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.<br>
+
+            4) Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.<br>
+        </p>
+    
+        <h3>Specificity Hierarchy</h3>
+        <p>
+            Every selector has its place in the specificity hierarchy.<br><br>
+
+            First priority is given to the style attribute<br>
+            Then to ID tags<br>
+            followed by each attribute, class or pseudo-class<br>
+            and at last, is element name or pseudo-element<br><br>
+
+            EXAMPLE) Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class, or pseudo-class, add 1 for each element name or pseudo-element.<br>
+
+            Consider these three code fragments:<br>
+                A: h1<br>
+                B: #content h1<br>
+                C: &lt;div id="content"&gt;&lt;h1 style="color: #ffffff"&gt;Heading&lt;/h1&gt;&lt;/div&gt;<br><br>
+                The specificity of A is 1 (one element)<br>
+                The specificity of B is 101 (one ID reference and one element)<br>
+                The specificity of C is 1000 (inline styling)<br><br>
+                Since 1 < 101 < 1000, the third rule (C) has a greater level of specificity, and therefore will be applied.
+        </p>
+        <p>
+            There are certain rules in addition to this hierarchy that must be followed :<br><br>
+            <strong>1) Equal specificity: the latest rule counts</strong> - If the same rule is written twice into the external CSS file, then the rule that is written lower in the CSS file is closer to the element to be styled and therefore will be applied.
+            <br><br>EXAMPLE) Consider the code scene :<br><br>
+            h1 {color: green;}<br>
+            h1 {color: red;} => Applied as it is closer<br>
+        </p>
+        <p>
+            <strong>2) ID selectors have a higher specificity than attribute selectors</strong> -
+            <br><br>EXAMPLE) Consider the code scene :<br><br>
+            div #a {color: green;} => Applied as it is more specific than the other two<br>
+            #a {color: yellow;}<br>
+            div[id=a] {color: blue;}<br>
+        </p>
+        <p>
+            <strong>3) Embedded style-sheet is more specific than the external style-sheet</strong> -
+            <br><br>EXAMPLE) Consider the code scene :<br><br>
+            In external CSS file:<br>
+            #idname h1 {color: red;}<br>
+            <br>
+            In HTML file: => Applied as it is more specific( closer to the element)<br>
+            &lt;style&gt;<br>
+            #idname h1 {<br>
+            color: blue;<br>
+            }<br>
+            &lt;/style&gt;<br>
+        </p>
+        <p>
+            <strong>4) A class selector beats any number of element selectors</strong> -
+            <br><br>EXAMPLE) Consider the code scene :<br><br>
+            .intro {color: red;} => Applied as it is beats the element selector<br>
+            h1 {color: green;}<br>
+        </p>
+        <p>
+            <strong>5) The universal selector and inherited values have a specificity of 0.</strong>
+        </p>
+        <p> For More such Interesting things stay tuned..</p>
+        <a class="nav-list-item-a " href="{% url 'blogs' %}">
+            <button class="button-secondary-blogs blogs-back-button" >Back to Blogs</button>
+        </a>
+    </div>
+
+    {% endblock %}

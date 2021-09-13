@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    
+    {% endblock %}
+
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>   
+
+    <nav class="navigation">
+        <div class="nav-brand">
+                <a class="nav-brand" href="/">@Milind Patel</a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a class="nav-list-item-a item-active" href="/">Home</a>
+            </li>
+            <li class="nav-list-item">
+                <a class="nav-list-item-a" href="{% url 'projects' %}">Projects</a>
+            </li>
+            <li class="nav-list-item">
+                <a class="nav-list-item-a" href="{% url 'blogs' %}">Blogs</a>
+            </li>
+        </ul>        
+    </nav>
+
+    {% block content %}
+    
+    
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="footer-text">
+            You can connect to me through
+        </div>
+        <ul class="footer-list">
+            <li class = "nav-list-item">
+                <a  class="nav-list-item-a" href="https://github.com/Ms-Patel"target="_blank" rel="noopener noreferrer">Github</a>
+            </li>
+            <li class = "nav-list-item">
+                <a class="nav-list-item-a" href="https://twitter.com/MrMilind_Patel"target="_blank" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class = "nav-list-item">
+                <a class="nav-list-item-a" href="https://www.linkedin.com/in/milind-patel-531020220/"target="_blank" rel="noopener noreferrer">Linkedin</a>
+            </li>
+            <li class = "nav-list-item">
+                <a class="nav-list-item-a" href="https://www.instagram.com/milind_2630/"target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

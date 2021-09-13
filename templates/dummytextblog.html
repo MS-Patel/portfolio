@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Blog | Dummy Text</title> 
+{% endblock %}
+    
+{% block content %}
+    <header class="header">
+        {% load static %}
+        <img class="blog-hero" src="{% static 'img/bazinga.png'%}">
+        <h1 class="hero-heading">The Dummy text, The Buzzinga text Blog.</h1>
+    </header>
+    <hr class="blogshr">1
+    <div class="container centered-container">
+        <p>
+            Hello my name is Good Anonymouse(Mayur Chawla). I am trying to create a dummy text for some display at my text area. This text can be used by all people who want to use simple english text instead of Loream Ipsum as a dummy text. There is no copyrigtht or any restriction for the use on this text. Regards.
+        </p>
+        <p>
+            With my introduction in first paragraph lets extend the text further. This is the second paragraph of dummy text. It can help developers to know what text is included. Since this text is in simple english it is easy and soothing to eyes and mind for people who work with english language on a daily basis. Also when people are bored they start thinking about problems and if we present some simple english text some(if not all) would rather engage in reading this dummy text and it would be beneficial for them.
+        </p>
+        <p>
+            This is the third paragrpah of our dummy text. This text can be used by all people who want to use simple english text instead of Loream Ipsum as a dummy text. This is fun to create our own dummy text. The readers would also undertand that this is some english text and would be able to read this rather than just yawning and thinking Loream Ipsum is so hard to read. Also since this text is in simple english it is easy and soothing to eyes and mind for people who work with english language on a daily basis.
+        </p>
+            <p>
+            Now, in this final paragraph let me tell you i don't know, if it would be beneficial to anyone eventhough i have created it. I can use it and you can also use it if you would like to use it. This is a fun text. This is a bazinga text. This is a bad boys text. This is a dummy english text. This is a sample text in english. It is simple to read. Rock, Paper, Lizard, Scissors, Spock. Acha humko Sikhariya hai.
+        </p>
+            <p>
+            Lets extend our dummy text now in Hinglish. What we mean to say is that some text is in english transcript but it is in Hindi language. We would also add some dialogues from good movies and some songs. Please bear with the text. 
+        </p>
+        <p>
+            Aaj mere paas gaadi hai, bungla hai, paisa hai... tumhare paas kya hai?<br><br>
+            Mere paas, mere paas... Maa hai..., from Deewar<br><br>
+            Kitney aadmi they.? from Sholay<br><br>
+            Rishte mein to hum tumhare baap lagte hain, naam hai Shahenshah.. from Shahenshah<br><br>
+            Kaun kambakth hai jo bardasht karne ke liye peeta hai. Main toh peeta hoon ke bas saans le sakoon from Devdas<br><br>
+            Main aaj bhi pheke hue paise nahin uthata from Deewar<br><br>
+            Pushpa, I hate tears... from Amar Prem<br><br>
+            Bade bade shehron mein aisi chhoti chhoti baatein hoti rehti hain, Senorita. from DDLJ<br><br>
+            Mogambo khush hua! from Mr. India<br><br>
+            Taareekh pe taareekh, taareekh pe taareekh, taarekh pe taareekh. from Damini<br><br>
+            Dosti ka ek usool hai, madam: no sorry, no thank you from Maine Pyar Kiya<br><br>
+            Zindagi mein bhi end mein sab theek ho jaata hai. Happys Endings. Aur agar, aur agar theek na ho to woh the end nahin hai dosto, picture abhi baaki hai. from Om Shanti Om<br><br>
+            Kabhi Kabhi Kuch Jeetne Ke Liya Kuch Haar Na Padta Hai. Aur Haar Ke Jeetne Wale Ko Baazigar Kehte Hain. from Baazigar<br><br>
+            Salim tujhe marne nahi dega ... aur hum Anarkali tujhe jeene nahi denge from Mughal-e-Azam<br><br>
+            Don ka intezaar toh baarah mulko ki police kar rahi hai, but Don ko pakadna mushkil hi nahi, namumkin hai from Don Old<br><br>
+            Aapke paon dekhe, bahut haseen hai. Inhe zameen par mat utariyega, maile ho jayenge from Pakeezah<br><br>
+    
+        </p>
+        <a class="nav-list-item-a " href="{% url 'blogs' %}">
+            <button class="button-secondary-blogs blogs-back-button" >Back to Blogs</button>
+        </a>
+    </div>
+   
+{% endblock %}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    --primary-color : #252526;
+    /* 811a74 7C3AED*/
+    --dark-gray : #6b7280;
+    --light-gray : #e3e5e8;
+}
+body {
+    margin : 0px;
+}
+.navigation {
+    background-color: var(--primary-color);
+    color : white;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.nav-brand {
+    font-weight: bold;
+    text-decoration: none;
+    color : white;
+}
+.nav-list {
+    list-style: none;
+    padding-inline-start: 0px;
+    text-align: right;
+}
+.item-active {
+    font-weight: bold;
+}
+.nav-list-item {
+    display : inline;
+    padding : 0rem 0.5rem;
+}
+.nav-list-item-a {
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+    text-decoration: none;
+    color : white;
+}
+
+/* Header */
+.header {
+    padding : 3rem 0rem;
+}
+.hero {
+    max-width: 80%;
+    width : 500px;
+    display : block;
+    margin : auto;
+}
+.hero-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    color : var(--dark-gray);
+}
+.hero-highlight {
+    color : var(--primary-color);
+}
+.hero-quote {
+    margin-top: 5px;
+    display : block;
+    margin: auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Sections */
+.sections {
+    padding : 2rem;
+    text-align : center;
+    align-items: center;
+}
+.container {
+    padding : 0rem 1rem;
+}
+.centered-container {
+    margin : auto;
+    max-width : 700px;
+}
+.sec-with-bg {
+    background-color: var(--light-gray);
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--primary-color);
+    color : white;
+    text-align: center;
+    padding : 4rem 1rem;
+    border-top-right-radius: 1rem;
+}
+.footer-text {
+    font-size: large;
+    font-weight: bold;
+}
+.footer-list {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+/* Buttons */
+.button-primary {
+    width: 140px;
+    display : block;
+    background-color: var(--primary-color);
+    font-size: medium;
+    color : white;
+    border-radius: .5rem;
+    padding : 0.5rem;
+    margin: auto;
+}
+.button-secondary {
+    width: 140px;
+    display : block;
+    background-color: var(--light-gray);
+    font-size: medium;
+    color : var(--primary-color);
+    border-radius: .5rem;
+    border-color: var(--primary-color);
+    padding : 0.5rem;
+    margin: auto;
+}
+.p_a {
+    text-decoration: none;
+}
+/* Changes For Blogs */
+.button-primary-blogs {
+    width: 140px;
+    background-color: var(--primary-color);
+    font-size: medium;
+    color : white;
+    border-radius: .5rem;
+    padding : 0.5rem;
+}
+.button-secondary-blogs {
+    width: 140px;
+    background-color: var(--light-gray);
+    font-size: medium;
+    color : var(--primary-color);
+    border-radius: .5rem;
+    border-color: var(--primary-color);
+    padding : 0.5rem;
+}
+
+/* css for blogs */
+.blog-page-title {
+    text-align: center;
+}
+.blog-sections {
+    padding : 2rem;
+    margin: auto;
+    max-width : 700px;
+    align-items: center;
+}
+.blogshr {
+    width:75%;
+}
+.blogs-back-button {
+    margin : 2rem;
+}
+.blog-hero {
+    max-width: 80%;
+    width : 600px;
+    display : block;
+    margin : auto;
+}
+.bsections {
+    padding : 2rem;
+    align-items: center;
+}

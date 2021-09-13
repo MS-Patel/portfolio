@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Profile | Milind Patel</title> 
+{% endblock %}
+    
+{% block content %}
+    
+    <header class="header">
+        {% load static %}
+        <img class="hero" src="{% static 'img/webhero.svg' %}">
+        <h1 class="hero-heading">Welcome to my <span class="hero-highlight">Portfolio</span>.</h1>
+        <p class="hero-quote">Your Life is bigger than your Current Circumstances, so let's build something amazing.</p>
+    </header>
+    <section class="sections sec-with-bg">
+        <div class="container centered-container">
+            <h1>Technologies</h1>
+            <p>I'm familiar with HTML5, CSS3, Git, JavaScript, ReactJS, Web Hosting in Web Development.<br>
+                I have also taken training in C, C++, Java, Android develpment, Unity 2D Development.</p>
+        </div>
+    </section>
+    <section class="sections">
+        <div class="container centered-container">
+            <h1>Projects</h1>
+            <p>I would like to show you all, some of my projects that are hosted online.</p>
+            <a class="p_a" href="projects">
+                <button class="button-primary">Check Projects</button>
+            </a>
+        </div>
+    </section>
+    <section class="sections sec-with-bg">
+        <div class="container centered-container">
+            <h1>Blogs</h1>
+            <p>I am working on some technical and non-technical blogs. Some of the topics are CSS practices and usecases, emoticons meanings, fonts. my quotes, etc...</p>
+            <a class="p_a" href="blogs">
+                <button class="button-secondary" >Check Blogs</button>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

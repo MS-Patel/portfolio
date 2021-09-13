@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Blog | Eslint, Emmet and other friends</title> 
+{% endblock %}
+    
+{% block content %}
+    <header class="header">
+        <img class="hero" src="">
+        <h1 class="hero-heading">Eslint, Emmet and other Web-Dev friends.</h1>
+    </header>
+    <hr class="blogshr">
+    <div class="container centered-container">
+        <p>
+            Hello and Welcome. Today i am going to tell you something about Eslint, Emmet and about other Web-Dev friends.
+        </p>
+        <div>
+            <center><h4>ESLINT - Pluggable Javascript Code Analysis Tool</h4></center>
+            <p>
+                Eslint is an open source static code analysis tool to check syntax, find problems, and enforce
+                code style. Eslint was created by <a href="https://humanwhocodes.com/">Nicholas C. Zakas</a> in the year
+                2013, it is used for identifying, analysing and reporting the glitches found in Javascript/ECMAscript to the developer.
+                Eslint’s goal is to avoid bugs and make code more consistent. It is similar to JSLint and JSHint with a few exceptions :
+            </p>
+                1) ESLint uses Espree for Javascript parsing, which is built on Acorn Architecture.<br>
+                2) It uses Abstract Syntax Tree to analyze the code.<br>
+                3) You can add your custom rules at runtime in Eslint like a plugin.<br>
+            <p>
+                Well I hope you are familiar with its installation and few of the many errors ( I would rather say
+                best practices ) like adding a “default case” in switch-case statement, ensuring the variable is
+                used within its scope, etc.. Helpful tip : “You should have npm installed in your package before installing eslint.”
+                Also if you are using eslint in vscode you would find a .eslintrc.{js, yml, json} normally “json” file.
+                And if you open it you would find something like :
+                <pre>
+                {
+                    "rules": {
+                        "semi": ["error", "always"],
+                        "quotes": ["error", "double"]
+                    }
+                }
+            </pre></p>
+            <p>
+                Here, the names “semi” and “quotes” are the rule names. The first value is a error level of the rule and can be one of values from :
+                <pre>
+                    “Off” or “0” : It means - turn the rule off
+                    “Warn” or “1” : It means - turn the rule on as a warning
+                    “Error” or “2” : It means - turn the rule on as an error
+
+                </pre>
+            </p>
+            <p>
+                You can find the list of available rules <a href="https://eslint.org/docs/rules/">here</a>. Its latest stable version v-7.25.0 was released on 23rd April, 2021.
+            </p>
+            <center><h4>Emmet - A Text Editor Plugin.? or More.?</h4></center>
+            <p>
+                Basically what most text editors allow you is that you store and re-use commonly used code chunks 
+                or commands - these chunks are called “code snippets”. Snippets are a good way to boost your productivity,
+                but the problem is that you have to write it the first time to reuse them later.
+            </p>
+            <p>
+                Emmet takes this idea in a different way. Basically what emmet does is, it allows you to type a CSS-like
+                expression that can be dynamically parsed and produce output depending on what you type in the abbreviation.
+                It was designed to optimize the workflow of HTML/CSS developers, but now it can also be used with other languages
+                like Javascript. When you install Vscode, emmet is automatically enabled for HTML and CSS.
+            </p>
+            <p>
+                Example => when you type html in Vscode, It would show you a pop-up displaying html5 on left and emmet on right side(on the same row). Just click on it and you will see the html-5 basic element code magically appearing on screen.
+            </p>
+            <p>
+                Emmet was designed by Vadim Makeev in 2008 and it’s original name was Zen Coding. It has list of 100s of
+                Shortcuts and you can download the Pdf list <a href="https://drive.google.com/file/d/1PTwZECIiW_Bbew7GxEuabIV3ujdw6Jwp/view?usp=sharing">here</a>
+            </p>
+            <p>
+                Today you can find emmet extensions for React library of functions also.
+                Today one of the most popular Emmet extension (Vscode editor) is ES7 React/Redux/React Native
+                Snippets. It is available on VScode Marketplace.
+            </p>
+            <center><h4>Other Friends</h4></center>
+            <p>
+                Git : Git is a version control system that lets you manage and keep track of your code history.
+            </p>
+            <p>
+                Github : GitHub is a cloud-based hosting service that lets you manage your Git repositories.
+                If you have open-source projects that use Git, then GitHub is designed to help you better manage them.
+            </p>
+            <p>
+                Github-Desktop : Github-desktop is a desktop application that enables you to use github hosting through the application interface.
+            </p>
+            <p>
+                VScode : Vscode is a text editor specially for software development.
+                It brings all things like git, github, emmet and eslint together for developers to use and bring their programs and ideas to life.
+            </p>
+            <p>
+                What ideas do you have.? You want to bring them to life.? Want to become a Developer.? Join <a href="https://neog.camp/">@neogcamp</a>
+            </p>
+        </div>
+        <a class="nav-list-item-a " href="{% url 'blogs' %}">
+            <button class="button-secondary-blogs blogs-back-button" >Back to Blogs</button>
+        </a>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Blog | Typescript vs Javascript</title> 
+{% endblock %}
+    
+{% block content %}
+    <header class="header">
+        <img class="hero" src="">
+        <h1 class="hero-heading">Typescript & Javascript.</h1>
+    </header>
+    <hr class="blogshr">
+    <div class="container centered-container">
+        <p>
+            Hello and Welcome. Today i am going to tell you something about Typescript and Javascript, and some of their differences.
+        </p>
+    
+        </p>
+        <a class="nav-list-item-a " href="{% url 'blogs' %}">
+            <button class="button-secondary-blogs blogs-back-button" >Back to Blogs</button>
+        </a>
+    </div>
+    {% endblock %}

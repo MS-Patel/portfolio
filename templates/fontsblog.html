@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Blog | Fonts</title> 
+{% endblock %}
+    
+{% block content %}
+    <header class="header">
+        {% load static %}
+        <img class="hero" src="{% static 'img/webhero.svg'%}">
+        <h1 class="hero-heading">Fonts Blog.</h1>
+    </header>
+    <hr class="blogshr">
+    <div class="container centered-container">
+        <p>
+            Hello and Welcome. Today i am going to recommend you some fonts to use.
+        </p>
+            Blog Under Construction
+        </p>
+        <a class="nav-list-item-a " href="{% url 'blogs' %}">
+            <button class="button-secondary-blogs blogs-back-button" >Back to Blogs</button>
+        </a>
+    </div>
+ 
+    {% endblock %}
