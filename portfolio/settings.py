@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd4hb7m189su6lr',
+        'USER' : 'yegtfnwugtpyjg',
+        'PASSWORD' : '80b3e1991b2135de2992fa344afc7155fe20574d53c788f4ed0350d50df580ea',
+        'HOST' : 'ec2-44-193-150-214.compute-1.amazonaws.com',
+        'PORT' : '5432',
     }
 }
 
@@ -101,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -115,10 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 
 STATIC_URL = '/static/'
 
