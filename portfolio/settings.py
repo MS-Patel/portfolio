@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tc2h!g!3-5^evt_qukkq5fv*mg-q^+eglejawhjcti7@-(*f8!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','mspatel.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'mspatel.herokuapp.com']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cv',
+    'myblogs',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,10 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd4hb7m189su6lr',
-        'USER' : 'yegtfnwugtpyjg',
-        'PASSWORD' : '80b3e1991b2135de2992fa344afc7155fe20574d53c788f4ed0350d50df580ea',
-        'HOST' : 'ec2-44-193-150-214.compute-1.amazonaws.com',
-        'PORT' : '5432',
+        'USER': 'yegtfnwugtpyjg',
+        'PASSWORD': '80b3e1991b2135de2992fa344afc7155fe20574d53c788f4ed0350d50df580ea',
+        'HOST': 'ec2-44-193-150-214.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -124,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
